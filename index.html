@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Laura Whalen">
+    <meta name="keywords" content="Data Analyst">
+    <meta name="description" content="Laura Whalen is a first year Data Analytics Student at Nova Scotia Community College.
+            Her skills include: Java, Python, SQL, R, HTML, and CSS.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <title>Laura Whalen</title>
+
+    <!-- styles -->
+    <link href="css/LauraWhalen_Homepage.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+
+    <!-- Font Awesome for contact icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- smooth scroll from: https://github.com/alicelieutier/smoothScroll -->
+    <script type="text/javascript" src="micro.js/smoothscroll.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            var pageLinks = document.getElementsByClassName("page-links");
+            var toggleMenu = document.getElementById("nav-toggle");
+            for(let i = 0; i < pageLinks.length;i++){
+                pageLinks.item(i).addEventListener("click", function() {
+                    toggleMenu.checked = false;
+                });
+            }
+        };
+    </script>
+
+</head>
+
+<body>
+    <!---------------------------------- NAVIGATION ---------------------------------->
+    <header>
+        <h2 class="logo">Laura Whalen</h2>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a class="page-links" href="#home">Home</a></li>
+                <li><a class="page-links" href="#about">About</a></li>
+                <li><a class="page-links" href="#skills">Skills</a></li>
+                <li><a class="page-links" href="#goals">Goals</a></li>
+                <li><a class="page-links" href="#contact">Contact</a></li>
+                <li><a class="page-links" href="LauraWhalen_Resume.html" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
+
+    <!---------------------------------- HOME ---------------------------------->
+    <div class="content">
+        <section class="flex-container" id="home">
+            <h1>HI! I'M LAURA</h1>
+        </section>
+
+        <section class="flex-container" id="about">
+            <h2>ABOUT ME</h2>
+            <hr>
+            <h3>First Year Data Analytics student at Nova Scotia Community College</h3>
+            <p>I'm a eager, knowledge-hungry Data Analytics student, keen to meet challenges,
+                I quickly understand new concepts and programs, and I'm ready to adapt and progress
+                in a growing and progressing field. I believe that data can be transformed into
+                information, and can be used to make better decisions in business and government.</p>
+            <p>Outside of school and work, you can find me hiking, hammock camping, playing trumpet,
+                or riding my motorcycle!</p>
+        </section>
+
+        <!---------------------------------- SKILLS ---------------------------------->
+        <section class="flex-container" id="skills">
+            <h2>SKILLS</h2>
+            <hr>
+            <div class="skills-container">
+                <p>Python</p>
+                <div class="bar-container">
+                    <div class="skills python">Novice</div>
+                </div>
+                <p>Java</p>
+                <div class="bar-container">
+                    <div class="skills java">Novice</div>
+                </div>
+                <p>SQL</p>
+                <div class="bar-container">
+                    <div class="skills sql">Novice</div>
+                </div>
+                <p>R</p>
+                <div class="bar-container">
+                    <div class="skills r">Novice</div>
+                </div>
+                <p>JavaScript</p>
+                <div class="bar-container">
+                    <div class="skills javascript">Novice</div>
+                </div>
+                <p>HTML</p>
+                <div class="bar-container">
+                    <div class="skills html">Intermediate</div>
+                </div>
+                <p>CSS</p>
+                <div class="bar-container">
+                    <div class="skills css">Intermediate</div>
+                </div>
+                <p>Cat Cuddling</p>
+                <div class="bar-container">
+                    <div class="skills cats">Expert *</div>
+                </div>
+                <p>* self-proclaimed</p>
+            </div>
+
+        <!---------------------------------- GOALS ---------------------------------->
+        </section>
+        <section class="flex-container" id="goals">
+            <h2>GOALS</h2>
+            <hr>
+        </section>
+        <section class="flex-container" id="goal-lists">
+            <div class="stgoals">
+                <h3>Short-Term Goals</h3>
+                <ul>
+                    <li>Get the most out of my co-op placement by asking lots of questions, taking on new initiatives and tasks, and seeking feedback</li>
+                    <li>Complete a personal data analysis project outside of school and work</li>
+                    <li>Continue attending networking events and meeting new people</li>
+                    <li>Be employed as a Data Analyst after graduation in June 2020</li>
+                    <li>Adopt a dog after finding employment</li>
+                </ul>
+            </div>
+            <div class="ltgoals">
+                <h3>Long-Term Goals</h3>
+                <ul>
+                    <li>Become a Data Analyst in the Crime-Prevention Industry</li>
+                    <li>Max out my RRSP contribution every year</li>
+                    <li>Continue learning by pursuing additional training and certifications</li>
+                    <li>Save enough money to buy a house</li>
+                    <li>Save enough money to buy a Yamaha R6</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <!---------------------------------- CONTACT ---------------------------------->
+        <section class="flex-container" id="contact">
+            <h2>CONTACT</h2>
+            <hr>
+            <div class="contact-icons">
+                <a href="https://ca.linkedin.com/in/whalenmlaura" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/whalenmlaura" target="_blank"><i class="fab fa-github-square"></i></a>
+                <a href="mailto:whalenmlaura@gmail.com"><i class="fas fa-envelope-square"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <!---------------------------------- FOOTER ---------------------------------->
+    <footer>
+        <div class="footer" id="footer">
+            <p>&#9400; Laura Whalen - Halifax, Nova Scotia</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
