@@ -1,0 +1,554 @@
+/* ---------------------------------- HTML ---------------------------------- */
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-bottom: 0;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+
+/* ---------------------------------- BODY ---------------------------------- */
+body {
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+  font-family: 'Cantarell';
+  margin-bottom: 100px;
+  clear: both;
+  /* Free stock photo from: https://www.canva.com/photos/misc/MADGvlUnneM-top-view-photo-of-ocean-waves/ */
+  background-image: url("https://i.imgur.com/gU69U5O.jpg"); 
+  background-repeat: repeat;
+}
+
+
+/* ---------------------------------- NAV ---------------------------------- */
+/* I followed this tutorial to create my navigation: https://www.youtube.com/watch?v=8QKOaTYvYUA */
+header {
+  background: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+.logo {
+  color: rgb(12, 43, 53);
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before, .nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.589);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: rgb(5, 31, 39);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: rgb(14, 48, 59);
+}
+
+.nav-toggle:checked~nav {
+  transform: scale(1, 1);
+}
+
+
+/* ---------------------------------- HOME ---------------------------------- */
+#home {
+  padding-top: 15%;
+  padding-bottom: 10%;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 60px;
+  text-align: center;
+}
+
+
+/* ---------------------------------- ABOUT ---------------------------------- */
+#about {
+  margin: 0;
+  padding-top: 10%;
+  padding-bottom: 20%;
+  padding-right: 10%;
+  padding-left: 10%;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 20px;
+  text-align: center;
+  -webkit-flex-flow: column;
+}
+
+#about hr {
+  width: 100%;
+}
+
+#about h2 {
+  padding: 0;
+  margin-block-start: 2%;
+  margin-block-end: 2%;
+}
+
+#about h3 {
+  text-decoration: none;
+  padding: 0;
+  margin-block-start: 2%;
+  margin-block-end: 0;
+}
+
+#about p {
+  padding: 0;
+  padding-bottom: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 0;
+}
+
+#about p:last-child {
+  margin-top: 0;
+  margin-block-end: 2%;
+}
+
+
+/* ---------------------------------- SKILLS ---------------------------------- */
+#skills {
+  margin: 0;
+  padding-top: 7%;
+  padding-bottom: 15%;
+  padding-right: 10%;
+  padding-left: 10%;
+  color: white;
+  text-align: center;
+  -webkit-flex-flow: column;
+  box-sizing: border-box;
+}
+
+#skills hr {
+  width: 100%;
+}
+
+#skills h2 {
+  margin-top: 0;
+}
+
+#skills p {
+  text-align: left;
+  margin: 0;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.skills-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-block-start: 2%;
+  margin-block-end: 2%;
+}
+
+.bar-container {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.767);
+  border-radius: 30px;
+}
+
+.skills {
+  text-align: right;
+  padding-right: 7px !important;
+  color: white;
+  height: 30px;
+  border-radius: 30px;
+  background-color: rgb(34, 140, 175);
+}
+
+.python {width: 40%;}
+.java {width: 35%;}
+.sql {width: 45%;}
+.r {width: 35%;}
+.html {width: 55%;}
+.css {width: 50%;}
+.javascript {width: 25%;}
+.cats {width: 98%;}
+
+#skills p:last-child {
+  text-align: right;
+  margin-right: 1%;
+  padding-top: 10px;
+  font-size: 15px;
+}
+
+
+/* ---------------------------------- GOALS ---------------------------------- */
+#goals {
+  margin: 0;
+  padding-top: 10%;
+  padding-bottom: 0%;
+  padding-right: 10%;
+  padding-left: 10%;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 20px;
+  text-align: center;
+  -webkit-flex-flow: column;
+}
+
+#goals hr {
+  width: 100%;
+}
+
+#goals h2 {
+  padding: 0;
+  margin-block-start: 2%;
+  margin-block-end: 2%;
+}
+
+#goal-lists {
+  margin: 0;
+  padding-top: 0%;
+  padding-bottom: 20%;
+  padding-right: 10%;
+  padding-left: 10%;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 20px;
+  text-align: left;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.stgoals, .ltgoals {
+  width: 37% !important;
+}
+
+.stgoals ul, .ltgoals ul {
+  padding-left: 1em;
+}
+
+.stgoals {
+  margin-left: 6%;
+}
+
+.ltgoals {
+  margin-right: 5%;
+}
+
+
+/* ---------------------------------- CONTACT ---------------------------------- */
+/* 'Buzz out' hover from: http://ianlunn.github.io/Hover/ - https://github.com/IanLunn/Hover/blob/master/css/hover.css */
+#contact {
+  margin: 0;
+  padding-top: 15%;
+  padding-bottom: 3%;
+  padding-right: 10%;
+  padding-left: 10%;
+  border-bottom: 5%;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 20px;
+  text-align: center;
+  -webkit-flex-flow: column;
+}
+
+#contact hr {
+  width: 100%;
+}
+
+.contact-icons {
+  margin-bottom: 0;
+}
+
+.fab, .fas {
+  color: white;
+  padding: 3%;
+  font-size: 60px;
+}
+
+@-webkit-keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+@keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+.fab, .fas {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.fab:hover, .fas:hover, .fab:focus, .fas:focus, .fab:active, .fas:active {
+  -webkit-animation-name: hvr-buzz-out;
+  animation-name: hvr-buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
+/* ---------------------------------- FOOTER ---------------------------------- */
+.footer {
+  clear: both;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.25px;
+  background: rgba(255, 255, 255, 0.85);
+  color: rgb(8, 39, 49);
+  text-align: center;
+}
+
+.footer p {
+  font-size: 20px;
+}
+
+
+/* ---------------------------------- PAGE RESIZES ---------------------------------- */
+@media all and (max-width: 850px) {
+  /* .navigation {
+    justify-content: space-around;
+  } */
+  .contact-icons {
+    margin-bottom: 10%;
+  }
+  #goal-lists {
+    -webkit-flex-flow: column wrap;
+  }
+  .stgoals, .ltgoals {
+    width: 100% !important;
+  }
+  .stgoals, .ltgoals {
+    margin-left: 4% !important;
+  }
+  .ltgoals {
+    margin-right: 0 !important;
+  }
+}
+
+@media all and (max-width: 600px) {
+  /* .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  } */
+  .contact-icons {
+    margin-bottom: 15%;
+  }
+  #goal-lists {
+    -webkit-flex-flow: column wrap;
+  }
+  .stgoals, .ltgoals {
+    width: 100% !important;
+  }
+  .stgoals, .ltgoals {
+    margin-left: 4% !important;
+  }
+  .ltgoals {
+    margin-right: 0 !important;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 30fr) 1fr;
+  }
+  .logo {
+    grid-column: 2 / 3;
+  }
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: rgb(14, 48, 59);
+    position: absolute;
+    bottom: -.25em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms;
+  }
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+}
